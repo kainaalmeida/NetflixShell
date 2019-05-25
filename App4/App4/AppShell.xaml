@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="App4.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fontawesome="clr-namespace:App4.Utils"
+    xmlns:local="clr-namespace:App4.Views"
+    Title="App4"
+    FlyoutBehavior="Disabled">
+
+    <!--
+        Styles and Resources
+    -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#0D0D0D" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#636266" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#121115" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#636266" />
+                <Setter Property="Shell.TabBarTitleColor" Value="White" />
+            </Style>
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellItem" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!--  Your Pages  -->
+    <ShellItem>
+        <Tab Title="Início">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.Home}"
+                    Size="8" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:InicioPage}" />
+        </Tab>
+        <Tab Title="Buscas">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.Search}"
+                    Size="16" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:BuscasPage}" />
+        </Tab>
+        <Tab Title="Em breve">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.PlayCircle}"
+                    Size="14" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:BrevePage}" />
+        </Tab>
+        <Tab Title="Download">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.Download}"
+                    Size="12" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:DownloadPage}" />
+        </Tab>
+        <Tab Title="Mais">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.ThList}"
+                    Size="10" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:MaisPage}" />
+        </Tab>
+    </ShellItem>
+
+    <!-- Optional Templates
+    // These may be provided inline as below or as separate classes.
+
+    // This header appears at the top of the Flyout.
+    <Shell.FlyoutHeaderTemplate>
+	<DataTemplate>
+            <Grid>ContentHere</Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    // ItemTemplate is for ShellItems as displayed in a Flyout
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <ContentView>
+                Bindable Properties: Title, Icon
+            </ContentView>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    // MenuItemTemplate is for MenuItems as displayed in a Flyout
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <ContentView>
+                Bindable Properties: Text, Icon
+            </ContentView>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    -->
+
+</Shell>
