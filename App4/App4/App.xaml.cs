@@ -9,6 +9,10 @@ namespace App4
         {
             InitializeComponent();
 
+#if DEBUG
+            HotReloader.Current.Start(this);
+#endif
+
             MainPage = new AppShell();
         }
 

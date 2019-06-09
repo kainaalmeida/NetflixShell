@@ -36,7 +36,7 @@
                 <FontImageSource
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     Glyph="{x:Static fontawesome:FontAwesomeIcons.Home}"
-                    Size="8" />
+                    Size="12" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:InicioPage}" />
         </Tab>
@@ -45,7 +45,7 @@
                 <FontImageSource
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     Glyph="{x:Static fontawesome:FontAwesomeIcons.Search}"
-                    Size="16" />
+                    Size="12" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:BuscasPage}" />
         </Tab>
@@ -54,7 +54,7 @@
                 <FontImageSource
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     Glyph="{x:Static fontawesome:FontAwesomeIcons.PlayCircle}"
-                    Size="14" />
+                    Size="12" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:BrevePage}" />
         </Tab>
@@ -72,7 +72,7 @@
                 <FontImageSource
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     Glyph="{x:Static fontawesome:FontAwesomeIcons.ThList}"
-                    Size="10" />
+                    Size="12" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:MaisPage}" />
         </Tab>
